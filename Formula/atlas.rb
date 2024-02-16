@@ -13,7 +13,7 @@ class Atlas < Formula
   end
 
   test do
-    assert_match "sullrich84/atlas", shell_output("#{bin}/atlas")
+    assert_match "sullrich84/atlas 0.0.0-alpha", shell_output("#{bin}/atlas")
   end
   
   def post_install
