@@ -1,4 +1,5 @@
-from .version import __version__
+from atlas.cli import cli
 
 if __name__ == "__main__":
-    print(f"sullrich84/atlas {__version__}")
+    print("atlas/__main__.py")
+    cli()

@@ -17,5 +17,12 @@ setup(
     name="atlas",
     version=get_version(),
     packages=find_packages(),
-    entry_points={"console_scripts": ["atlas = atlas.__main__:main"]},
+    include_package_data=True,
+    install_requires=[
+        "click==8.1.7",
+    ],
+    entry_points="""
+        [console_scripts]
+        atlas=atlas.cli:main
+    """,
 )
