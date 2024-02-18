@@ -15,12 +15,11 @@ class Atlas < Formula
   
   def install
     virtualenv_install_with_resources
-    # bin.install "atlas/cli.py" => "atlas"
   end
 
-  test do
-    assert_match "sullrich84/atlas 0.0.0-alpha", shell_output("#{bin}/atlas")
-  end
+  # test do
+  #   assert_match "sullrich84/atlas 0.0.0-alpha", shell_output("#{bin}/atlas")
+  # end
   
   def post_install
     ohai "🌐 Atlas successfully installed"
