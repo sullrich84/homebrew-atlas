@@ -18,9 +18,14 @@ setup(
     version=get_version(),
     packages=find_packages(),
     include_package_data=True,
+    # Required third party dependencies for this application
+    # Note: Also define this in the Homebrew formula via poet!
+    # Note: Also import this in __init__.py!
     install_requires=[
         "click==8.1.7",
     ],
+    # Homebrew will use this to define the entry point
+    # for the executable of this application.
     entry_points="""
         [console_scripts]
         atlas=atlas.cli:cli
