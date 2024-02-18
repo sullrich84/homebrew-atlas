@@ -30,6 +30,6 @@ setup(
     # for the executable of this application.
     entry_points="""
         [console_scripts]
-        atlas=atlas.cli
+        atlas=atlas.cli:cli
     """,
 )
