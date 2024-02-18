@@ -1,10 +1,5 @@
-import click
-
-
-@click.command()
-@click.option("--version", "-v", is_flag=True, help="Display the version.")
 def main():
-    click.echo(f"Atlas version xx")
+    print(f"Atlas version xx")
 
 
 def cli():
