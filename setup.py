@@ -18,6 +18,8 @@ setup(
     version=get_version(),
     packages=find_packages(),
     include_package_data=True,
+    # Note: Align this with Homebrew formula!
+    python_requires=">=3.9",
     # Required third party dependencies for this application
     # Note: Also define this in the Homebrew formula via poet!
     # Note: Also import this in __init__.py!
@@ -28,6 +30,6 @@ setup(
     # for the executable of this application.
     entry_points="""
         [console_scripts]
-        atlas=atlas.cli:cli
+        atlas=atlas.cli
     """,
 )
