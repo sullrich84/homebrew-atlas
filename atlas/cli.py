@@ -1,16 +1,33 @@
-import os
-import click
+import sys
+import argparse
 from atlas.version import __version__
 
 
-@click.command()
-@click.option("--username", prompt=True, default=lambda: os.environ.get("USER", ""))
-def hello(username):
-    click.echo(f"Hello, {username}!")
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        prog="Atlas",
+        description="Text describing the atlas application.",
+        epilog="Text at the bottom of help",
+    )
+
+    parser.add_argument(
+        "-v",
+        "--version",
+        help="Prints the application version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+    )
+
+    return parser.parse_args()
 
 
 def cli():
-    print(f"atlas {__version__}")
+    try:
+        args = parse_arguments()
+        # Add application code here
+    except KeyboardInterrupt:
+        print("Aborted by user.")
+        sys.exit(0)
 
 
 if __name__ == "__main__":

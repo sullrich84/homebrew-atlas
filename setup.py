@@ -24,7 +24,7 @@ setup(
     # Note: Also define this in the Homebrew formula via poet!
     # Note: Also import this in __init__.py!
     install_requires=[
-        "click==8.1.7",
+        "argparse==1.4.0",
     ],
     # Homebrew will use this to define the entry point
     # for the executable of this application.
