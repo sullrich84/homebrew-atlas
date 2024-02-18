@@ -15,7 +15,6 @@ class Atlas < Formula
   
   def install
     virtualenv_install_with_resources
-    bin.install "atlas/cli.py" => "atlas"
   end
 
   # test do
