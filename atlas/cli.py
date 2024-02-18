@@ -1,9 +1,8 @@
-def main():
-    print(f"Atlas version xx")
+from atlas.version import __version__
 
 
 def cli():
-    print("atlas/cli.py:cli()")
+    print(f"atlas {__version__}")
 
 
 if __name__ == "__main__":
