@@ -24,11 +24,13 @@ def parse_arguments():
 def cli():
     try:
         args = parse_arguments()
+
         # Add application code here
+        print("Hello World!")
+
     except KeyboardInterrupt:
         print("Aborted by user.")
         sys.exit(0)
-
 
 if __name__ == "__main__":
     cli()
