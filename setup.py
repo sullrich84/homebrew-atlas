@@ -23,6 +23,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        atlas=atlas.cli
+        atlas=atlas.cli:cli
     """,
 )
